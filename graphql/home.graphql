@@ -1,0 +1,27 @@
+query Home {
+	homePage {
+		id
+		title
+		about
+		seo: _seoMetaTags {
+			attributes
+			content
+			tag
+		}
+	}
+	site: _site {
+		favicon: faviconMetaTags {
+			attributes
+			content
+			tag
+		}
+		globalSeo {
+			siteName
+			titleSuffix
+			fallbackSeo {
+				description
+				title
+			}
+		}
+	}
+}
